@@ -7,6 +7,8 @@ import { Report } from './../models/report';
 })
 export class ReportService {
 
+    reportActive: Report;
+    
     private mockReports: Report[] = [
         {
             name: 'report 1',

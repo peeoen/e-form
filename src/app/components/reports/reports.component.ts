@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ReportService } from '../../services/report.service';
 import { Report } from './../../models/report';
@@ -15,7 +16,8 @@ export class ReportsComponent implements OnInit {
   reports$: Observable<Report[]>;
 
   constructor(private reportService: ReportService,
-    public dialog: MatDialog) { }
+    public dialog: MatDialog,
+  private router: Router) { }
 
   ngOnInit() {
     this.reports$ = this.reportService.getReports();
@@ -29,7 +31,6 @@ export class ReportsComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe((report: Report) => {
       if (report) {
-        console.log(report);
         report.image = 'assets/sample-forms/form1.png';
         this.reportService.addReport(report);
       }
@@ -40,5 +41,10 @@ export class ReportsComponent implements OnInit {
     if (confirm('Are you sure to delete this report?')) {
       this.reportService.removeReport(report);
     }
+  }
+
+  editReport(report: Report) {
+    this.reportService.reportActive = report;
+    this.router.navigate(['forms-builder']);
   }
 }

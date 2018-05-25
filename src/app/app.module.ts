@@ -8,6 +8,11 @@ import { DialogReportComponent } from './components/dialog-report/dialog-report.
 import { ReportsComponent } from './components/reports/reports.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { MaterialModule } from './modules/material.module';
+import { FormBuilderComponent } from './components/form-builder/form-builder.component';
+import { HeaderBuilderComponent } from './components/form-builder/header-builder/header-builder.component';
+import { ControlsComponent } from './components/form-builder/controls/controls.component';
+import { ReportTemplateComponent } from './components/form-builder/report-template/report-template.component';
+import { ReportPagesComponent } from './components/form-builder/report-pages/report-pages.component';
 
 
 
@@ -16,7 +21,12 @@ import { MaterialModule } from './modules/material.module';
     AppComponent,
     MainNavComponent,
     ReportsComponent,
-    DialogReportComponent
+    DialogReportComponent,
+    FormBuilderComponent,
+    HeaderBuilderComponent,
+    ControlsComponent,
+    ReportTemplateComponent,
+    ReportPagesComponent
   ],
   imports: [
     BrowserModule,

@@ -2,8 +2,8 @@
   <mat-sidenav #sidenav  class="sidenav" [mode]="mode.value">
     <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/">FORMS</a>
-      <a mat-list-item routerLink="posts">Posts</a>
+      <a mat-list-item routerLink="/"  (click)="sidenav.close()">FORMS</a>
+      <a mat-list-item routerLink="posts"  (click)="sidenav.close()">Posts</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
