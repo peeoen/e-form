@@ -1,0 +1,19 @@
+<div mat-dialog-content>
+    <mat-form-field class="full-width">
+        <input matInput placeholder="Report Name" [(ngModel)]="reportData.name">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+          <textarea matInput rows="5" placeholder="Description"  [(ngModel)]="reportData.description"></textarea>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <mat-select placeholder="Page Size"  [(ngModel)]="reportData.sizepage">
+              <mat-option *ngFor="let size of pageSizes" [value]="size.name">
+                {{ size.value }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+</div>
+<div mat-dialog-actions  align="end">
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="reportData" cdkFocusInitial>Ok</button>
+</div>

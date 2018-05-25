@@ -4,13 +4,13 @@
       <h4 class="title">
         Reports
       </h4>
-      <span class="add-card">
+      <span class="add-card" (click)="openDialog()">
           <mat-icon>note_add</mat-icon>
       </span>
     </div>
     <div class="col-12">
       <div class="row">
-        <div class="box col-12 col-sm-6 col-lg-3" *ngFor="let report of reports">
+        <div class="box col-12 col-sm-6 col-lg-3" *ngFor="let report of reports$ | async">
           <mat-card class="example-card">
             <mat-card-header>
               <mat-card-title>{{report.name}}</mat-card-title>
@@ -19,13 +19,13 @@
               <img mat-card-image [src]="report.image" alt="Photo of a Shiba Inu">
             </div>
             <mat-card-content>
-              <p>
+              <p class="description">
                   {{report.description}}
               </p>
             </mat-card-content>
-            <mat-card-actions align="right">
-              <button mat-raised-button color="warn">EDIT</button>
-              <button mat-raised-button>DELETE</button>
+            <mat-card-actions align="end">
+              <button mat-raised-button color="primary">EDIT</button>
+              <button mat-raised-button (click)="removeReport(report)">DELETE</button>
             </mat-card-actions>
           </mat-card>
         </div>

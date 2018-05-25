@@ -1,11 +1,8 @@
 import { LayoutModule } from '@angular/cdk/layout';
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatCardModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatDialogModule, MatFormFieldModule, MatIconModule, MatInputModule, MatListModule, MatSelectModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
 
 @NgModule({
-    imports: [
-
-    ],
     exports: [
         LayoutModule,
         MatToolbarModule,
@@ -14,7 +11,10 @@ import { MatButtonModule, MatCardModule, MatIconModule, MatListModule, MatSidena
         MatIconModule,
         MatListModule,
         MatCardModule,
-    ],
-    providers: [],
+        MatDialogModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule
+    ]
 })
 export class MaterialModule { }

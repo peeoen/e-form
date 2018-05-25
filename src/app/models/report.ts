@@ -1,6 +1,9 @@
+import { Page } from './page';
+
 export interface Report {
     name: string;
     description: string;
-    sizepage: any;
+    sizepage: string;
     image?: any;
+    pages?: Page[];
 }
