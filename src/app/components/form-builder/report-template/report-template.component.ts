@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as jsPDF from 'jspdf';
 
 @Component({
   selector: 'app-report-template',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportTemplateComponent implements OnInit {
 
-  constructor() { }
+  pdfSrc: string;
+  constructor() { 
+    const doc = new jsPDF('p', 'px', 'a4');
+    const uri = doc.output('datauristring');
+
+    this.pdfSrc = uri;
+  }
 
   ngOnInit() {
   }

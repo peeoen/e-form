@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DialogReportComponent } from './components/dialog-report/dialog-report.component';
@@ -9,13 +10,12 @@ import { ControlComponent } from './components/form-builder/controls/control/con
 import { ControlsComponent } from './components/form-builder/controls/controls.component';
 import { FormBuilderComponent } from './components/form-builder/form-builder.component';
 import { HeaderBuilderComponent } from './components/form-builder/header-builder/header-builder.component';
+import { ReportPageComponent } from './components/form-builder/report-pages/report-page/report-page.component';
 import { ReportPagesComponent } from './components/form-builder/report-pages/report-pages.component';
 import { ReportTemplateComponent } from './components/form-builder/report-template/report-template.component';
 import { ReportsComponent } from './components/reports/reports.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { MaterialModule } from './modules/material.module';
-import { ReportPageComponent } from './components/form-builder/report-pages/report-page/report-page.component';
-
 
 
 @NgModule({
@@ -37,6 +37,7 @@ import { ReportPageComponent } from './components/form-builder/report-pages/repo
     BrowserAnimationsModule,
     FormsModule,
     MaterialModule,
+    PdfViewerModule,
     AppRoutingModule
   ],
   entryComponents: [
