@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { PageSize } from './../models/page';
+import { Page, PageSize } from './../models/page';
 
 @Injectable({
     providedIn: 'root'
@@ -7,8 +7,22 @@ import { PageSize } from './../models/page';
 export class PageService {
 
     pageSizes: PageSize[] = [];
-    
+    pages: Page[] = [];
     constructor() { 
+        this.createPages();
+        this.createPageSizes();
+    }
+
+    createPages() {
+      for (let i = 1; i <= 7; i++) {
+        this.pages.push({
+            number: i,
+            image: 'assets/sample-forms/form1.png'
+        });
+      }
+    }
+
+    createPageSizes() {
         const prefix = ['a', 'b', 'c'];
         for (let p = 0; p < prefix.length; p++) {
             for (let r = 0; r <= 10; r++) {

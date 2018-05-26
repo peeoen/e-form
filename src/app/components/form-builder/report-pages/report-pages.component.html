@@ -1,3 +1,10 @@
-<p>
-  report-pages works!
-</p>
+<div class="row pages-header">
+  <div class="col text-center pt-2 ">
+    <label for="pages header" class="header">Pages</label>
+  </div>
+</div>
+<div class="row no-pad content">
+  <div class="col-12" *ngFor="let page of pages">
+      <app-report-page [page]="page"></app-report-page>
+  </div>
+</div>

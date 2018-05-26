@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Page } from './../../../models/page';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-report-pages',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportPagesComponent implements OnInit {
 
+  @Input() pages: Page[];
+  
   constructor() { }
 
   ngOnInit() {

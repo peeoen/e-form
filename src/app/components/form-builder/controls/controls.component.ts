@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Control } from './../../../models/control';
 
 @Component({
   selector: 'app-controls',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ControlsComponent implements OnInit {
 
+  @Input() controls: Control[];
   constructor() { }
 
   ngOnInit() {
+
   }
+
 
 }

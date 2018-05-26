@@ -10,8 +10,21 @@
 .sidenav {
   width: 200px;
   box-shadow: 3px 0 6px rgba(0,0,0,.24);
+  height: 64px;
 }
 
 .content{
    margin-top: 15px;
+   height: calc(100% - 79px);
+}
+
+
+a,a:hover,a:click, a:visited{
+  border:none;
+  outline:none;
+  text-decoration:none;
+}
+
+a{
+  color: #fff !important;
 }

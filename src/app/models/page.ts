@@ -1,6 +1,7 @@
 export interface Page {
     number: number;
-    config: any;
+    image?: string;
+    config?: any;
 }
 
 

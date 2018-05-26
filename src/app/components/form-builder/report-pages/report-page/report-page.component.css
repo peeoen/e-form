@@ -1,0 +1,17 @@
+:host {
+    cursor: pointer;
+}
+
+.page:first-child  {
+    margin-top: 15px !important;
+}
+
+.page {
+    margin: 5px 5px 0px 5px;
+
+}
+
+.img-page {
+    width: 100%;
+    border: 1px solid black;
+}

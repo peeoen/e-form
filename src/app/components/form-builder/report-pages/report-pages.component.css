@@ -1,0 +1,15 @@
+.pages-header {
+    background-color: #2188F5;
+    color: #fff;
+}
+
+.header {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.content {
+    border: 1px solid #2188F5;
+    overflow: auto;
+}

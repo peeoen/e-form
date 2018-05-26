@@ -5,4 +5,7 @@ html, body {
 
 body { margin: 0; }
 
-
+  .row.no-pad  > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+  }

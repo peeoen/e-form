@@ -1,0 +1,5 @@
+.template {
+    height: 96%;
+    margin: 0 auto;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.14), 0 7px 8px rgba(0, 0, 0, 0.28) !important;
+}
