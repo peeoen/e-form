@@ -7,10 +7,14 @@
   right: 0;
 }
 
+mat-sidenav-content > mat-toolbar {
+  height: 64px;
+}
+
 .sidenav {
   width: 200px;
   box-shadow: 3px 0 6px rgba(0,0,0,.24);
-  height: 64px;
+ 
 }
 
 .content{
@@ -25,6 +29,6 @@ a,a:hover,a:click, a:visited{
   text-decoration:none;
 }
 
-a{
+mat-sidenav-content > mat-toolbar  a{
   color: #fff !important;
 }

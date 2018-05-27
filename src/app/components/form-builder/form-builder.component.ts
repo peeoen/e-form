@@ -23,13 +23,16 @@ export class FormBuilderComponent implements OnInit {
 
     if (this.reportService.reportActive) {
       this.report = this.reportService.reportActive;
-      this.pages = this.pageService.pages;
+      console.log(this.report);
+      
+      this.pages = this.report.pages;
+      console.log(this.pages);
       this.controls = this.controlsService.controls;
     }
 
-    this.report = this.reportService.reportActive;
-    this.pages = this.pageService.pages;
-    this.controls = this.controlsService.controls;
+    // this.report = this.reportService.reportActive;
+    // this.pages = this.pageService.pages;
+    // this.controls = this.controlsService.controls;
   }
 
   ngOnInit() {

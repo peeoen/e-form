@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { DialogReportComponent } from './components/dialog-report/dialog-report.component';
 import { ControlComponent } from './components/form-builder/controls/control/control.component';
 import { ControlsComponent } from './components/form-builder/controls/controls.component';
+import { LabelComponent } from './components/form-builder/controls/label/label.component';
 import { FormBuilderComponent } from './components/form-builder/form-builder.component';
 import { HeaderBuilderComponent } from './components/form-builder/header-builder/header-builder.component';
 import { ReportPageComponent } from './components/form-builder/report-pages/report-page/report-page.component';
@@ -30,7 +31,8 @@ import { MaterialModule } from './modules/material.module';
     ReportTemplateComponent,
     ReportPagesComponent,
     ControlComponent,
-    ReportPageComponent
+    ReportPageComponent,
+    LabelComponent
   ],
   imports: [
     BrowserModule,

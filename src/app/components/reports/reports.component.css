@@ -46,7 +46,7 @@ mat-card-title {
     font-weight: bold;
 }
 
-mat-card-content>p {
+mat-card-content > p {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;

@@ -9,7 +9,7 @@ export class PageService {
     pageSizes: PageSize[] = [];
     pages: Page[] = [];
     constructor() { 
-        this.createPages();
+        // this.createPages();
         this.createPageSizes();
     }
 

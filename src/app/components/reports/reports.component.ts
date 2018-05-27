@@ -31,8 +31,12 @@ export class ReportsComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe((report: Report) => {
       if (report) {
-        report.image = 'assets/sample-forms/form1.png';
-        this.reportService.addReport(report);
+        const _newReport = new Report();
+        _newReport.name = report.name;
+        _newReport.description = report.description;
+        _newReport.sizepage = report.sizepage;
+        _newReport.image = 'assets/sample-forms/form1.png';
+        this.reportService.addReport(_newReport);
       }
     });
   }

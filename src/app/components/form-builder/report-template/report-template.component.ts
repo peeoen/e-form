@@ -7,7 +7,10 @@ import * as jsPDF from 'jspdf';
   styleUrls: ['./report-template.component.css']
 })
 export class ReportTemplateComponent implements OnInit {
-
+  screen = {
+    width: null,
+    height: null
+  };
   pdfSrc: string;
   constructor() { 
     const doc = new jsPDF('p', 'px', 'a4');
@@ -19,4 +22,9 @@ export class ReportTemplateComponent implements OnInit {
   ngOnInit() {
   }
 
+  pageRendered(e: CustomEvent) {
+    const el = document.getElementsByClassName('pdfViewer')[0];
+    this.screen.width = el.clientWidth + 'px';
+    this.screen.height = el.clientHeight + 'px';
+  }
 }
