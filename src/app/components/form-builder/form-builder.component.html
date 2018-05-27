@@ -1,15 +1,18 @@
 <div class="container-fluid">
   <div class="row header">
-    <div class="col-12">
+    <div class="col-11">
       <app-header-builder [reportName]="report?.name"></app-header-builder>
+    </div>
+    <div class="col-1">
+      <button (click)="generatePdf()">Gen PDF</button>
     </div>
   </div>
   <div class="row mt-3 content">
     <div class="col-2 overflow-mini">
-      <app-controls [controls]="controls"></app-controls>
+      <app-controls (selected)="selectedControl($event)" [controls]="controls"></app-controls>
     </div>
     <div class="col-7 offset-1 overflow-mini">
-      <app-report-template></app-report-template>
+      <app-report-template #reportTemplate></app-report-template>
     </div>
     <div class="col-1 offset-1 overflow-mini">
       <app-report-pages [pages]="pages"></app-report-pages>
