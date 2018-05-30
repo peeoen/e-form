@@ -6,8 +6,7 @@ import { Directive, ElementRef, ViewContainerRef } from '@angular/core';
 })
 export class ControlDirective {
   constructor(public viewContainerRef: ViewContainerRef, public el: ElementRef) {
-    console.log(viewContainerRef);
-    console.log(el);
+
     
    }
 }

@@ -1,4 +1,4 @@
-<div class="page">
+<div class="page" (click)="selectPage()" [ngClass]="{'page-active': active}">
   <div >
     <img  class="img-page" [src]="page.image" alt="">
   </div>

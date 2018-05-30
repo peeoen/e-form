@@ -5,6 +5,6 @@
 </div>
 <div class="row no-pad content">
   <div class="col-12" *ngFor="let page of pages">
-    <app-report-page [page]="page"></app-report-page>
+    <app-report-page (selected)="selectedPage($event)" [page]="page" [active]="page == pageActive"></app-report-page>
   </div>
 </div>

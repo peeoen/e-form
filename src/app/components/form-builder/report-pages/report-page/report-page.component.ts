@@ -1,5 +1,5 @@
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Page } from './../../../../models/page';
-import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-report-page',
@@ -10,9 +10,15 @@ import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core
 export class ReportPageComponent implements OnInit {
 
   @Input() page: Page;
+  @Output() selected = new EventEmitter();
+  @Input() active: boolean;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  selectPage() {
+    this.selected.emit(this.page);
   }
 
 }

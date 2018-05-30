@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header-builder',
@@ -9,9 +9,14 @@ import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core
 export class HeaderBuilderComponent implements OnInit {
 
   @Input() reportName: string;
+  @Output() selectedNewPage = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  newPage() {
+    this.selectedNewPage.emit();
+  }
 }

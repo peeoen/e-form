@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Page } from './../../../models/page';
 
 @Component({
@@ -10,13 +10,18 @@ import { Page } from './../../../models/page';
 export class ReportPagesComponent implements OnInit {
 
   @Input() pages: Page[];
+  @Output() selected = new EventEmitter();
+  @Input() pageActive: Page;
   
   constructor() { 
 
   }
 
   ngOnInit() {
-    console.log(this.pages);
+  }
+
+  selectedPage($event: Page) {
+    this.selected.emit($event);
   }
 
 }

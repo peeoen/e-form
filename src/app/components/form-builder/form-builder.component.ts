@@ -18,7 +18,7 @@ export class FormBuilderComponent implements OnInit {
   report: Report;
   pages: Page[];
   controls: Control[];
-
+  pageActive: Page;
   @ViewChild('reportTemplate')
   reportTemplate: ReportTemplateComponent;
 
@@ -26,18 +26,16 @@ export class FormBuilderComponent implements OnInit {
   private pageService: PageService,
   private controlsService: ControlsService) {
 
+  }
+
+  ngOnInit() {
+    
     if (this.reportService.reportActive) {
       this.report = this.reportService.reportActive;
       this.pages = this.report.pages;
       this.controls = this.controlsService.controls;
+      this.renderPage(this.pages[0]);
     }
-
-    // this.report = this.reportService.reportActive;
-    // this.pages = this.pageService.pages;
-    // this.controls = this.controlsService.controls;
-  }
-
-  ngOnInit() {
   }
 
   selectedControl(event) {
@@ -48,4 +46,19 @@ export class FormBuilderComponent implements OnInit {
     this.reportTemplate.generatePdf();
   }
 
+  newPage() {
+    let currPage = Math.max(...this.pages.map(x => x.number));
+    const page = new Page(++currPage);
+    this.report.pages.push(page);
+  }
+
+  renderPage(page: Page) {
+    this.pageActive = page;
+    this.reportTemplate.renderPage(page);
+  }
+
+
+  selectedPage(page: Page) {
+    this.renderPage(page);
+  }
 }
