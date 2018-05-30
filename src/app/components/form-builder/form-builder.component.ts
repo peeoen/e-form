@@ -43,7 +43,7 @@ export class FormBuilderComponent implements OnInit {
   }
 
   generatePdf() {
-    this.reportTemplate.generatePdf();
+    this.reportTemplate.generatePdf(this.report);
   }
 
   newPage() {

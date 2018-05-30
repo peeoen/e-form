@@ -18,11 +18,12 @@ export class ConfigPage {
     style?: any;
     componentName?: string;
 
-    constructor(name: string, posX: number, posY: number, componentName: string) {
+    constructor(name: string, posX: number, posY: number, componentName: string, value?: any) {
         this.name = name;
         this.posX = posX;
         this.posY = posY;
         this.componentName = componentName;
+        this.value = value;
     }
 }
 
